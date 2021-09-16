@@ -45,7 +45,7 @@ class CallScreen extends React.Component {
           this.props.joinRoom(stream);
         })
         .catch((error) => {
-          console.log(error);
+          //console.log(error);
         });
     });
   }

@@ -29,4 +29,4 @@ const db = config.get("mongoURI");
 io.on("connection", function (socket) {});
 
 const port = process.env.PORT || 5000;
-server.listen(port, () => console.log(`Server started on port ${port}`));
+server.listen(port, () => //console.log(`Server started on port ${port}`));

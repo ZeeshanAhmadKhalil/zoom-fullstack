@@ -9,7 +9,7 @@ import {ID} from './authActions';
 import {mediaDevices} from 'react-native-webrtc';
 
 //** API_URI */
-export const API_URI = `http://192.168.254.243:5000`;
+export const API_URI = `http://192.168.18.91:5000`;
 
 const peerServer = new Peer(undefined, {
   secure: false,
@@ -25,14 +25,14 @@ const peerServer = new Peer(undefined, {
   },
 });
 
-peerServer.on('error', console.log);
+peerServer.on('error', //console.log);
 
 //** Socket Config */
 export const socket = IO(`${API_URI}`, {
   forceNew: true,
 });
 
-socket.on('connection', () => console.log('Connection'));
+socket.on('connection', () => //console.log('Connection'));
 
 export const joinGeneralRoom = () => async (dispatch) => {
   socket.emit('join-general-room', 'ajsdflajslkdfuaisfjwioerwqiheriyqw87ery');
@@ -78,7 +78,7 @@ export const stream = () => async (dispatch) => {
         dispatch(joinStream(stream));
       })
       .catch((error) => {
-        console.log(error);
+        //console.log(error);
       });
   });
 };
